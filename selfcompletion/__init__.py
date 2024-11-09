@@ -16,8 +16,7 @@ class _CompletionAction(argparse.Action):
             nargs=None,
             type=str,
             help=help)
-
-
+#change 1.0
     def __call__(self, parser, namespace, values, option_string=None):
         comp_words = re.split(r'\s+', values.lstrip())
         for valid_word in parser.get_valid_next_words(comp_words):
